@@ -5,6 +5,7 @@ import {
 } from "recharts";
 
 const API = "https://widen-spearhead-series.ngrok-free.dev";
+const HEADERS = { "Content-Type": "application/json", "ngrok-skip-browser-warning": "true" };
 
 const palette = {
   actual: "#22d3ee",
@@ -103,7 +104,7 @@ export default function App() {
     try {
       const r = await fetch(`${API}/estimate`, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: HEADERS,
         body: JSON.stringify({ snr_db: snr, n_samples: nSamples, n_tx: nTx, n_rx: nRx }),
       });
       if (!r.ok) throw new Error((await r.json()).detail);
@@ -118,7 +119,7 @@ export default function App() {
     try {
       const r = await fetch(`${API}/ber-snr-curve`, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: HEADERS,
         body: JSON.stringify({
           snr_range: [0, 5, 10, 15, 20],
           n_samples: berSamples,
@@ -136,7 +137,7 @@ export default function App() {
     try {
       const r = await fetch(`${API}/train`, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: HEADERS,
         body: JSON.stringify(trainParams),
       });
       if (!r.ok) throw new Error((await r.json()).detail);
