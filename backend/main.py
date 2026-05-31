@@ -45,7 +45,7 @@ app.add_middleware(
 )
 
 # ── Global state ─────────────────────────────────────────────
-MODEL_PATH   = "cnn_mimo_channel_estimator.h5"
+MODEL_PATH   = "cnn_mimo_channel_estimator.keras"
 model        = None
 training_job = {"running": False, "progress": 0, "log": []}
 N_FFT        = 64

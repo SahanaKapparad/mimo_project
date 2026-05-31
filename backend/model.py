@@ -76,7 +76,7 @@ def train_model(num_samples, n_fft, n_tx, n_rx, l_paths,
 
     log(30, "Building CNN…")
     model = build_cnn(n_fft, n_rx, n_tx)
-    model.compile(optimizer=Adam(1e-3), loss='mse', metrics=['mae'])
+    model.compile(optimizer=Adam(1e-3), loss='mean_squared_error', metrics=['mean_absolute_error'])
 
     epoch_counter = [0]
     def on_epoch_end(epoch, logs):
