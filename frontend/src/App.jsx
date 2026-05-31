@@ -4,8 +4,8 @@ import {
   Tooltip, Legend, ResponsiveContainer, BarChart, Bar, Cell
 } from "recharts";
 
-const API = "https://widen-spearhead-series.ngrok-free.dev";
-const HEADERS = { "Content-Type": "application/json", "ngrok-skip-browser-warning": "true" };
+const API = "http://localhost:8000";
+const HEADERS = { "Content-Type": "application/json" };
 
 const palette = {
   actual: "#22d3ee",
