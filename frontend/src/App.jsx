@@ -4,7 +4,7 @@ import {
   Tooltip, Legend, ResponsiveContainer, BarChart, Bar, Cell
 } from "recharts";
 
-const API = "https://mimoproject-production.up.railway.app";
+const API = "https://widen-spearhead-series.ngrok-free.dev";
 
 const palette = {
   actual: "#22d3ee",
