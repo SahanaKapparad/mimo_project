@@ -4,7 +4,7 @@ import {
   Tooltip, Legend, ResponsiveContainer, BarChart, Bar, Cell
 } from "recharts";
 
-const API = "http://localhost:8000";
+const API = "https://mimoproject-production.up.railway.app";
 
 const palette = {
   actual: "#22d3ee",
